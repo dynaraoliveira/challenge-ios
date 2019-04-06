@@ -14,4 +14,8 @@ struct BaseProvider {
         return "https://alodjinha.herokuapp.com/banner"
     }
     
+    static var urlCategory: String {
+        return "https://alodjinha.herokuapp.com/categoria"
+    }
+    
 }

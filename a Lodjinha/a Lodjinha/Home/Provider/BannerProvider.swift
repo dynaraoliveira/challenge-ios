@@ -14,14 +14,8 @@ typealias CallbackBanner = (@escaping () -> BannerList?) -> Void
 class BannerProvider: NSObject {
     static func fetchBanners(url: URL, completion: @escaping CallbackBanner) {
         Alamofire.request(url).validate().responseData { (response) in
-            guard let data = response.data else {
-                print("Failed to get data")
-                return
-            }
-            guard let banners = try? JSONDecoder().decode(BannerList.self, from: data) else {
-                print("Failed to parse banners")
-                return
-            }
+            guard let data = response.data else { return }
+            guard let banners = try? JSONDecoder().decode(BannerList.self, from: data) else { return }
             
             completion { banners }
         }

@@ -61,7 +61,7 @@
         <!--Banner Page View Controller-->
         <scene sceneID="dcS-Q4-m42">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Pci-28-nhr" customClass="BannerPageViewController" customModule="a_Lodjinha" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Pci-28-nhr" customClass="BannerPageViewController" customModule="a_Lodjinha" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dg-PA-4es" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2552" y="-242"/>

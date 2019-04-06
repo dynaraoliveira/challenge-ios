@@ -18,4 +18,11 @@ struct BaseProvider {
         return "https://alodjinha.herokuapp.com/categoria"
     }
     
+    static var urlProduct: String {
+        return "https://alodjinha.herokuapp.com/produto"
+    }
+    
+    static var urlTopSelled: String {
+        return "https://alodjinha.herokuapp.com/produto/maisvendidos"
+    }
 }

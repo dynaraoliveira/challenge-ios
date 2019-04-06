@@ -15,7 +15,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     public func setupCategory(_ category : Category) {
         categoryDescriptionLb.text = category.description
-        setupImage(url: category.imageUrl)
+        setupImage(url: category.urlImage)
     }
     
     func setupImage(url: String) {

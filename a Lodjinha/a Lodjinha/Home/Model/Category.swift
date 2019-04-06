@@ -11,17 +11,17 @@ import Foundation
 struct Category: Codable {
     let id: Int
     let description: String
-    let imageUrl: String
+    let urlImage: String
         
     enum CodingKeys: String, CodingKey {
         case id
         case description = "descricao"
-        case imageUrl = "urlImagem"
+        case urlImage = "urlImagem"
     }
 }
 
 struct CategoryList: Codable {
-    var data : [Category]?
+    var data: [Category]?
     
     enum CodingKeys: String, CodingKey {
         case data

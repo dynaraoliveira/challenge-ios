@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="a_Lodjinha" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="a_Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,13 +58,43 @@
             </objects>
             <point key="canvasLocation" x="1784.057971014493" y="-42.1875"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Banner Page View Controller-->
         <scene sceneID="dcS-Q4-m42">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Pci-28-nhr" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Pci-28-nhr" customClass="BannerPageViewController" customModule="a_Lodjinha" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dg-PA-4es" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2552" y="-242"/>
+        </scene>
+        <!--Banner View Controller-->
+        <scene sceneID="KSU-WJ-msd">
+            <objects>
+                <viewController storyboardIdentifier="BannerViewController" id="FdL-S2-7si" customClass="BannerViewController" customModule="a_Lodjinha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GWp-Iy-iys">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j5v-oS-Lzb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="j5v-oS-Lzb" secondAttribute="trailing" id="4yN-FA-k9F"/>
+                            <constraint firstItem="j5v-oS-Lzb" firstAttribute="top" secondItem="GWp-Iy-iys" secondAttribute="top" id="Acg-g5-48d"/>
+                            <constraint firstAttribute="bottom" secondItem="j5v-oS-Lzb" secondAttribute="bottom" id="B8i-2P-OaC"/>
+                            <constraint firstItem="j5v-oS-Lzb" firstAttribute="leading" secondItem="9XG-Zv-kYv" secondAttribute="leading" id="I82-hM-dLF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9XG-Zv-kYv"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="160"/>
+                    <connections>
+                        <outlet property="bannerIV" destination="j5v-oS-Lzb" id="kBV-iA-FBW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMd-8E-VQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3273.913043478261" y="-243.08035714285714"/>
         </scene>
         <!--Sobre-->
         <scene sceneID="SXd-Ec-eTm">

@@ -173,13 +173,12 @@
 		A512BBD02258F7DD00F6C4B5 /* a Lodjinha */ = {
 			isa = PBXGroup;
 			children = (
+				A5D9D62A22594D3300C78B73 /* Storyboard */,
 				A5D9D6102259093400C78B73 /* Extension */,
 				A5D9D6022259012700C78B73 /* Api */,
 				A5D9D5FA2258FA7900C78B73 /* Home */,
 				A512BBD12258F7DD00F6C4B5 /* AppDelegate.swift */,
-				A512BBD52258F7DD00F6C4B5 /* Main.storyboard */,
 				A512BBD82258F7E000F6C4B5 /* Assets.xcassets */,
-				A512BBDA2258F7E000F6C4B5 /* LaunchScreen.storyboard */,
 				A512BBDD2258F7E000F6C4B5 /* Info.plist */,
 				A5D9D5FC2258FE0200C78B73 /* Fonts */,
 			);
@@ -298,6 +297,15 @@
 				A5D9D621225932AD00C78B73 /* TopSelledTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A5D9D62A22594D3300C78B73 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A512BBD52258F7DD00F6C4B5 /* Main.storyboard */,
+				A512BBDA2258F7E000F6C4B5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

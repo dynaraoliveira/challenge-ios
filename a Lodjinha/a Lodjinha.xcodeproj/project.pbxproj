@@ -17,6 +17,11 @@
 		A512BBE72258F7E000F6C4B5 /* a_LodjinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A512BBE62258F7E000F6C4B5 /* a_LodjinhaTests.swift */; };
 		A512BBF22258F7E000F6C4B5 /* a_LodjinhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A512BBF12258F7E000F6C4B5 /* a_LodjinhaUITests.swift */; };
 		A5D9D5FE2258FE1D00C78B73 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5D9D5FD2258FE1200C78B73 /* Pacifico-Regular.ttf */; };
+		A5D9D601225900D800C78B73 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9D600225900D800C78B73 /* Banner.swift */; };
+		A5D9D6052259014800C78B73 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9D6042259014800C78B73 /* BaseProvider.swift */; };
+		A5D9D608225901EC00C78B73 /* BannerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9D607225901EC00C78B73 /* BannerProvider.swift */; };
+		A5D9D60B2259045A00C78B73 /* BannerManagerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9D60A2259045A00C78B73 /* BannerManagerApi.swift */; };
+		A5D9D60D2259067400C78B73 /* BannerPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9D60C2259067400C78B73 /* BannerPageViewController.swift */; };
 		F1380F524424B00BC08E3F74 /* Pods_a_LodjinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EAE5FF64908B53AE1C5129 /* Pods_a_LodjinhaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +63,11 @@
 		A512BBF12258F7E000F6C4B5 /* a_LodjinhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a_LodjinhaUITests.swift; sourceTree = "<group>"; };
 		A512BBF32258F7E000F6C4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D9D5FD2258FE1200C78B73 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		A5D9D600225900D800C78B73 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Banner.swift; path = "a Lodjinha/Home/Controller/Banner.swift"; sourceTree = SOURCE_ROOT; };
+		A5D9D6042259014800C78B73 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
+		A5D9D607225901EC00C78B73 /* BannerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerProvider.swift; sourceTree = "<group>"; };
+		A5D9D60A2259045A00C78B73 /* BannerManagerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerManagerApi.swift; sourceTree = "<group>"; };
+		A5D9D60C2259067400C78B73 /* BannerPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerPageViewController.swift; sourceTree = "<group>"; };
 		A609826F0A6D140E20BE5134 /* Pods-a LodjinhaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-a LodjinhaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-a LodjinhaUITests/Pods-a LodjinhaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D2970EBFAD5E3DB66118F10A /* Pods-a LodjinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-a LodjinhaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-a LodjinhaTests/Pods-a LodjinhaTests.release.xcconfig"; sourceTree = "<group>"; };
 		E644863EB9C791A1945566E1 /* Pods-a LodjinhaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-a LodjinhaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-a LodjinhaUITests/Pods-a LodjinhaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +149,7 @@
 		A512BBD02258F7DD00F6C4B5 /* a Lodjinha */ = {
 			isa = PBXGroup;
 			children = (
+				A5D9D6022259012700C78B73 /* Api */,
 				A5D9D5FA2258FA7900C78B73 /* Home */,
 				A512BBD12258F7DD00F6C4B5 /* AppDelegate.swift */,
 				A512BBD52258F7DD00F6C4B5 /* Main.storyboard */,
@@ -171,6 +182,9 @@
 		A5D9D5FA2258FA7900C78B73 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A5D9D6092259043B00C78B73 /* Manager */,
+				A5D9D606225901D900C78B73 /* Provider */,
+				A5D9D5FF225900B400C78B73 /* Model */,
 				A5D9D5FB2258FA8100C78B73 /* Controller */,
 			);
 			path = Home;
@@ -180,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				A512BBD32258F7DD00F6C4B5 /* HomeViewController.swift */,
+				A5D9D60C2259067400C78B73 /* BannerPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,6 +205,46 @@
 				A5D9D5FD2258FE1200C78B73 /* Pacifico-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A5D9D5FF225900B400C78B73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9D600225900D800C78B73 /* Banner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5D9D6022259012700C78B73 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9D6032259013200C78B73 /* Provider */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		A5D9D6032259013200C78B73 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9D6042259014800C78B73 /* BaseProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		A5D9D606225901D900C78B73 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9D607225901EC00C78B73 /* BannerProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		A5D9D6092259043B00C78B73 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9D60A2259045A00C78B73 /* BannerManagerApi.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,8 +458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D9D60D2259067400C78B73 /* BannerPageViewController.swift in Sources */,
+				A5D9D60B2259045A00C78B73 /* BannerManagerApi.swift in Sources */,
 				A512BBD42258F7DD00F6C4B5 /* HomeViewController.swift in Sources */,
 				A512BBD22258F7DD00F6C4B5 /* AppDelegate.swift in Sources */,
+				A5D9D608225901EC00C78B73 /* BannerProvider.swift in Sources */,
+				A5D9D601225900D800C78B73 /* Banner.swift in Sources */,
+				A5D9D6052259014800C78B73 /* BaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

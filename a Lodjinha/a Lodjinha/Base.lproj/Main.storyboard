@@ -17,7 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weu-4y-wle">
+                                <rect key="frame" x="0.0" y="88" width="414" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="UDN-xt-OL0"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Pci-28-nhr" kind="embed" id="tZf-Mn-VnI"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-RY-9gw">
+                                <rect key="frame" x="0.0" y="448" width="414" height="365"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umA-w5-vSS">
+                                <rect key="frame" x="0.0" y="248" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Wog-yO-1HG"/>
+                                </constraints>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eb2-RY-9gw" secondAttribute="bottom" id="0Xu-if-SzB"/>
+                            <constraint firstItem="umA-w5-vSS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6ov-pI-bCw"/>
+                            <constraint firstItem="umA-w5-vSS" firstAttribute="top" secondItem="weu-4y-wle" secondAttribute="bottom" id="TKo-vj-Kwp"/>
+                            <constraint firstItem="umA-w5-vSS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xhu-Cw-dRY"/>
+                            <constraint firstItem="eb2-RY-9gw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="blK-nP-Qfe"/>
+                            <constraint firstItem="weu-4y-wle" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e1R-41-xbU"/>
+                            <constraint firstItem="weu-4y-wle" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e2j-iB-NhW"/>
+                            <constraint firstItem="eb2-RY-9gw" firstAttribute="top" secondItem="umA-w5-vSS" secondAttribute="bottom" id="pJx-52-sdv"/>
+                            <constraint firstItem="weu-4y-wle" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rV5-cq-dgi"/>
+                            <constraint firstItem="eb2-RY-9gw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uWZ-UA-a0q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="R5E-U1-FKj"/>
@@ -25,6 +57,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1784.057971014493" y="-42.1875"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="dcS-Q4-m42">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Pci-28-nhr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dg-PA-4es" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2552" y="-242"/>
         </scene>
         <!--Sobre-->
         <scene sceneID="SXd-Ec-eTm">

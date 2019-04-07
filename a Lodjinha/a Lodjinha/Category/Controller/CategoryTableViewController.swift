@@ -64,4 +64,12 @@ class CategoryTableViewController: UITableViewController {
         return 85
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let product = products?[indexPath.row],
+            let vc = storyBoard.instantiateViewController(withIdentifier:"ProductsDetailsViewController") as? ProductsDetailsViewController else { return }
+        vc.setProduct(product)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

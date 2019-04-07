@@ -51,5 +51,11 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let category = categories?[indexPath.item],
+            let vc = storyBoard.instantiateViewController(withIdentifier:"CategoryTableViewController") as? CategoryTableViewController else { return }
+        vc.setCategory(category)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

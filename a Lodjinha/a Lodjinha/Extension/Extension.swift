@@ -22,3 +22,12 @@ extension UIImageView {
         }
     }
 }
+
+extension UITabBar {
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+        super.sizeThatFits(size)
+        var sizeThatFits = super.sizeThatFits(size)
+        sizeThatFits.height = 60
+        return sizeThatFits
+    }
+}

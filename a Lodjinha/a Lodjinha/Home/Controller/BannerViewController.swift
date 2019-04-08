@@ -42,6 +42,18 @@ class BannerViewController: UIViewController {
         let imageBottom = UIImageView(image: UIImage(named: "fillVertical"))
         imageBottom.frame = rectBottom
         self.view.addSubview(imageBottom)
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageBannerTapped))
+        bannerIV.isUserInteractionEnabled = true
+        bannerIV.addGestureRecognizer(tapGestureRecognizer)
 
     }
+    
+    @objc
+    private func imageBannerTapped() {
+        if let url = URL(string: banner?.linkUrl ?? "") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
 }

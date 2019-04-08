@@ -329,7 +329,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-Xp-ZKA">
-                                            <rect key="frame" x="322.33333333333331" y="80.666666666666671" width="56.666666666666686" height="26.333333333333329"/>
+                                            <rect key="frame" x="319.33333333333331" y="80.666666666666671" width="56.666666666666686" height="26.333333333333329"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <color key="textColor" red="0.82745098039999998" green="0.28235294119999998" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -348,11 +348,11 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="Fhz-Xp-ZKA" secondAttribute="bottom" id="bxz-mV-SV6"/>
                                         <constraint firstItem="iWb-uK-MWX" firstAttribute="top" secondItem="tJr-MV-TiI" secondAttribute="topMargin" id="dmy-GL-L9R"/>
                                         <constraint firstItem="OWc-IR-xS1" firstAttribute="top" secondItem="tJr-MV-TiI" secondAttribute="top" constant="9" id="eZz-KS-Qyc"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Fhz-Xp-ZKA" secondAttribute="trailing" constant="15" id="g6M-hE-LPS"/>
+                                        <constraint firstItem="4ts-Oq-HHg" firstAttribute="trailingMargin" secondItem="Fhz-Xp-ZKA" secondAttribute="trailing" constant="10" id="g6M-hE-LPS"/>
                                         <constraint firstItem="QGq-qn-TP1" firstAttribute="bottom" secondItem="tJr-MV-TiI" secondAttribute="bottomMargin" id="gNN-Qr-Z0w"/>
                                         <constraint firstAttribute="trailing" secondItem="4ts-Oq-HHg" secondAttribute="trailing" constant="20" symbolic="YES" id="ih9-iU-xEG"/>
                                         <constraint firstAttribute="bottom" secondItem="OWc-IR-xS1" secondAttribute="bottom" constant="8.6699999999999999" id="kFt-qa-INL"/>
-                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="iWb-uK-MWX" secondAttribute="trailing" id="kta-MC-eY7"/>
+                                        <constraint firstItem="4ts-Oq-HHg" firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="iWb-uK-MWX" secondAttribute="trailing" id="kta-MC-eY7"/>
                                         <constraint firstItem="Fhz-Xp-ZKA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tJr-MV-TiI" secondAttribute="leading" id="qdw-eN-egs"/>
                                         <constraint firstItem="4ts-Oq-HHg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OWc-IR-xS1" secondAttribute="trailing" constant="8" symbolic="YES" id="rcV-QA-BYD"/>
                                         <constraint firstItem="QGq-qn-TP1" firstAttribute="leading" secondItem="OWc-IR-xS1" secondAttribute="trailing" constant="14" id="uuz-cc-uJn"/>

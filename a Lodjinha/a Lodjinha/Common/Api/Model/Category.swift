@@ -9,9 +9,9 @@
 import Foundation
 
 struct Category: Codable {
-    let id: Int
-    let description: String
-    let urlImage: String
+    var id: Int
+    var description: String
+    var urlImage: String
         
     enum CodingKeys: String, CodingKey {
         case id
@@ -27,3 +27,5 @@ struct CategoryList: Codable {
         case data
     }
 }
+
+

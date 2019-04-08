@@ -35,9 +35,7 @@ class CategoryTableViewController: UITableViewController {
     private func setupProducts() {
         guard let idCategory = category?.id else { return }
         productManagerApi.fetchProducts(idCategory: idCategory) { (products) in
-            self.products = products()?.data?.filter({ (product) -> Bool in
-                return product.category.id == self.category?.id
-            })
+            self.products = products()?.data
             self.tableView.reloadData()
         }
     }

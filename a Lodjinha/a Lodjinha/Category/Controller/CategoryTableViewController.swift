@@ -33,7 +33,8 @@ class CategoryTableViewController: UITableViewController {
     }
     
     private func setupProducts() {
-        productManagerApi.fetchProducts { (products) in
+        guard let idCategory = category?.id else { return }
+        productManagerApi.fetchProducts(idCategory: idCategory) { (products) in
             self.products = products()?.data?.filter({ (product) -> Bool in
                 return product.category.id == self.category?.id
             })
@@ -61,15 +62,14 @@ class CategoryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
+        return 100
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let product = products?[indexPath.row],
+        guard let idProduct = products?[indexPath.row].id,
             let vc = storyBoard.instantiateViewController(withIdentifier:"ProductsDetailsViewController") as? ProductsDetailsViewController else { return }
-        vc.setProduct(product)
+        vc.setIdProduct(idProduct)
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

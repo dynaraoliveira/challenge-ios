@@ -52,9 +52,10 @@ extension TopSelledViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let product = products?[indexPath.row],
+        guard let idProduct = products?[indexPath.row].id,
             let vc = storyBoard.instantiateViewController(withIdentifier:"ProductsDetailsViewController") as? ProductsDetailsViewController else { return }
-        vc.setProduct(product)
+        vc.setIdProduct(idProduct)
+        tabBarController?.tabBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }
     

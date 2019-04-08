@@ -28,10 +28,14 @@ struct Product: Codable {
     }
 }
 
-struct ProductList : Codable {
-    var data : [Product]?
+struct ProductList: Codable {
+    var data: [Product]?
     
     enum CodingKeys: String, CodingKey {
         case data
     }
+}
+
+struct ProductReserveResponse: Codable {
+    var result: String
 }

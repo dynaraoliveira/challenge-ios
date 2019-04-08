@@ -56,6 +56,7 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         guard let category = categories?[indexPath.item],
             let vc = storyBoard.instantiateViewController(withIdentifier:"CategoryTableViewController") as? CategoryTableViewController else { return }
         vc.setCategory(category)
+        tabBarController?.tabBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }
 }

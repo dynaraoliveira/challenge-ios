@@ -9,7 +9,6 @@
 import Foundation
 
 class BannerManagerApi: OperationQueue {
-    
     func fetchBanners(completion: @escaping CallbackBanner) {
         guard let url = URL(string: BaseProvider.urlBanner) else { return }
         addOperation {

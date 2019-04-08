@@ -19,7 +19,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func setupImage(url: String) {
-        guard let url = URL(string: url) else { return }
         categoryIV.loadImage(withURL: url)
     }
     

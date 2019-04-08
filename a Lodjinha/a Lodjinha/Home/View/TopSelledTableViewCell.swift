@@ -16,10 +16,10 @@ class TopSelledTableViewCell: UITableViewCell {
     @IBOutlet weak var topSelledToPriceLb: UILabel!
     
     func setupProduct(_ product: Product) {
-        guard let url = URL(string: product.urlImage) else { return }
-        topSelledIV.loadImage(withURL: url)
+        let fromPrice = "De " + String(format: "%.2f", arguments: [product.fromPrice])
+        topSelledIV.loadImage(withURL: product.urlImage)
         topSelledDescriptionLb.text = product.name
-        topSelledFromPriceLb.text = "De " + String(format: "%.2f", arguments: [product.fromPrice])
+        topSelledFromPriceLb.attributedText = fromPrice.setTrace()
         topSelledToPriceLb.text = "Por " + String(format: "%.2f", arguments: [product.toPrice])
     }
     

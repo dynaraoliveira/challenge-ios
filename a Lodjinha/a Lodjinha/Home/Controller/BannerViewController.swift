@@ -24,7 +24,24 @@ class BannerViewController: UIViewController {
     }
     
     func loadImage() {
-        guard let banner = banner, let url = URL(string: banner.urlImage) else { return }
-        bannerIV.loadImage(withURL: url)
+        
+        guard let banner = banner else { return }
+        bannerIV.loadImage(withURL: banner.urlImage)
+
+        let rectLeft = CGRect(x: 0, y: 0, width: 80, height: self.view.frame.height)
+        let imageLeft = UIImageView(image: UIImage(named: "fillVerticalLeft"))
+        imageLeft.frame = rectLeft
+        bannerIV.addSubview(imageLeft)
+
+        let rectRight = CGRect(x: self.view.frame.width - 80, y: 0, width: 80, height: self.view.frame.height)
+        let imageRight = UIImageView(image: UIImage(named: "fillVerticalRight"))
+        imageRight.frame = rectRight
+        bannerIV.addSubview(imageRight)
+
+        let rectBottom = CGRect(x: 0, y: bannerIV.frame.height, width: self.view.frame.width, height: 10)
+        let imageBottom = UIImageView(image: UIImage(named: "fillVertical"))
+        imageBottom.frame = rectBottom
+        self.view.addSubview(imageBottom)
+
     }
 }

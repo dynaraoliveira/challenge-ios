@@ -10,34 +10,28 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    func loadImage(withURL: URL) {
+    func loadImage(withURL: String) {
+        guard let withURL = URL(string: withURL) else { return }
+        
         DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: withURL) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
+            if let data = try? Data(contentsOf: withURL), let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self?.image = image
                 }
             }
         }
     }
-}
 
-extension UITabBar {
-    open override func sizeThatFits(_ size: CGSize) -> CGSize {
-        super.sizeThatFits(size)
-        var sizeThatFits = super.sizeThatFits(size)
-        sizeThatFits.height = 90
-        return sizeThatFits
-    }
 }
 
 extension String {
     func htmlToString() -> NSAttributedString? {
-        guard let data = self.data(using: String.Encoding.utf16, allowLossyConversion: false) else { return nil }
+        let modifiedFont = NSString(format:"<span style=\"font-family: '-apple-system', 'HelveticaNeue'; font-size: 14\">%@</span>" as NSString, self) as String
+        
+        guard let data = modifiedFont.data(using: String.Encoding.utf16, allowLossyConversion: false) else { return nil }
         
         guard let string = try? NSMutableAttributedString(data: data,
-                                                          options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html],
+                                                          options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html],
                                                           documentAttributes: nil) else { return nil }
         
         return string
@@ -46,6 +40,7 @@ extension String {
     func setTrace() -> NSMutableAttributedString {
         let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self)
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+        
         return attributeString
     }
 }

@@ -16,10 +16,11 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var productToPriceLb: UILabel?
     
     func setupProduct(_ product: Product) {
-        guard let url = URL(string: product.urlImage) else { return }
-        productIV?.loadImage(withURL: url)
+        let fromPrice = "De " + String(format: "%.2f", arguments: [product.fromPrice])
+        
+        productIV?.loadImage(withURL: product.urlImage)
         productDescriptionLb?.text = product.name
-        productFromPriceLb?.text = "De " + String(format: "%.2f", arguments: [product.fromPrice])
+        productFromPriceLb?.attributedText = fromPrice.setTrace()
         productToPriceLb?.text = "Por " + String(format: "%.2f", arguments: [product.toPrice])
     }
     

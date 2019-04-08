@@ -84,7 +84,7 @@ extension BannerPageViewController: UIPageViewControllerDelegate, UIPageViewCont
 extension BannerPageViewController {
     private func setupPageControl() {
         pageControl = UIPageControl(frame: CGRect(x: 0,
-                                                  y: view.frame.maxY - 20,
+                                                  y: view.frame.maxY - 30,
                                                   width: view.frame.width,
                                                   height: 15))
         

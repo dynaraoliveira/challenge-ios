@@ -11,23 +11,22 @@ import XCTest
 
 class a_LodjinhaTests: XCTestCase {
 
+    var controller: HomeViewController!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        self.controller = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
     }
-
+    
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.controller = nil
+        super.tearDown()
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        self.controller.viewDidLoad()
+        XCTAssertNotNil(self.controller.navigationItem.titleView, "titleView is nil")
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
 }

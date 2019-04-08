@@ -23,7 +23,7 @@ class BannerViewController: UIViewController {
         self.banner = banner
     }
     
-    func loadImage() {
+    private func loadImage() {
         
         guard let banner = banner else { return }
         bannerIV.loadImage(withURL: banner.urlImage)
